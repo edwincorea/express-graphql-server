@@ -344,6 +344,10 @@ caller-path@^0.1.0:
   dependencies:
     callsites "^0.2.0"
 
+caller@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/caller/-/caller-1.0.1.tgz#b851860f70e195db3d277395aa1a7e23ea30ecf5"
+
 callsites@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-0.2.0.tgz#afab96262910a7f33c19a5775825c69f34e350ca"
@@ -2269,6 +2273,12 @@ repeat-element@^1.1.2:
 repeat-string@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/repeat-string/-/repeat-string-1.6.1.tgz#8dcae470e1c88abc2d600fff4a776286da75e637"
+
+require-graphql-file@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/require-graphql-file/-/require-graphql-file-1.0.1.tgz#7242ee37b85777b915f0aa8943c995cff7726cfa"
+  dependencies:
+    caller "^1.0.1"
 
 require-uncached@^1.0.3:
   version "1.0.3"

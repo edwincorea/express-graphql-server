@@ -1,31 +1,11 @@
-var express = require('express')
-var expressGraphql = require('express-graphql')
-var { buildSchema } = require('graphql')
+const express = require('express')
+const expressGraphql = require('express-graphql')
+const { buildSchema } = require('graphql')
+const requireGraphQLFile = require('require-graphql-file')
 
-// GraphQL schema
-// const schema = buildSchema(`
-//     type Query {
-//         message: String
-//     }
-// `)
+const source = requireGraphQLFile('./schema')
 
-const schema = buildSchema(`
-    type Query {
-        course(id: Int!): Course
-        courses(topic: String): [Course]
-    },
-    type Course {
-        id: Int
-        title: String
-        author: String
-        description: String
-        topic: String
-        url: String
-    },
-    type Mutation {
-        updateCourseTopic(id: Int!, topic: String!): Course
-    }    
-`)
+const schema = buildSchema(source)
 
 const coursesData = [
     {
